@@ -2,28 +2,28 @@
   "name": "tailwindcss-text-fill-stroke",
   "version": "0.1.0",
   "description": "Text-fill and text-stroke utilities for Tailwind CSS.",
-  "main": "index.js",
+  "keywords": [
+    "plugin",
+    "tailwind",
+    "tailwind css",
+    "tailwindcss",
+    "tailwindcss-plugin"
+  ],
+  "homepage": "https://github.com/hacknug/tailwindcss-text-fill-stroke#readme",
+  "bugs": {
+    "url": "https://github.com/hacknug/tailwindcss-text-fill-stroke/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hacknug/tailwindcss-text-fill-stroke.git"
   },
-  "keywords": [
-    "tailwind",
-    "tailwindcss",
-    "tailwind css",
-    "tailwindcss-plugin",
-    "plugin"
-  ],
-  "author": {
-    "name" : "Nestor Vera",
-    "email" : "nestorvera@me.com",
-    "url" : "https://nestor.rip/"
-  },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hacknug/tailwindcss-text-fill-stroke/issues"
+  "author": {
+    "name": "Nestor Vera",
+    "email": "nestorvera@me.com",
+    "url": "https://nestor.rip/"
   },
-  "homepage": "https://github.com/hacknug/tailwindcss-text-fill-stroke#readme",
+  "main": "index.js",
   "dependencies": {
     "lodash": "^4.17.10"
   }
