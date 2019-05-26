@@ -24,7 +24,18 @@
     "url": "https://nestor.rip/"
   },
   "main": "index.js",
+  "scripts": {
+    "dev": "jest --watchAll",
+    "test": "jest"
+  },
   "dependencies": {
-    "lodash": "^4.17.10"
+    "flat": "^4.1.0",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "jest-matcher-css": "^1.0.3",
+    "postcss": "^7.0.16",
+    "tailwindcss": "^1.0.1"
   }
 }

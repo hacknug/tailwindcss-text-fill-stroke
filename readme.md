@@ -1,6 +1,6 @@
 # Tailwind CSS Text Indent Plugin
 
-This plugin adds utilities to use text-fill and text-stroke with Tailwind CSS.
+This plugin adds utilities to use `text-fill` and `text-stroke` with Tailwind CSS.
 
 ## Installation
 
@@ -25,13 +25,14 @@ By default the plugin uses the `borderColors` and `borderWidths` properties from
 require('tailwindcss-text-fill-stroke')({
   colors: {
     'red': 'red',
-    'blue': 'blue',
     'green': 'green',
+    'blue': 'blue',
   },
   widths: {
     default: '1px',
-    'sm': '4px',
-    'md': '8px',
+    'sm': '2px',
+    'md': '4px',
+    'lg': '8px',
   },
   variants: [],
 }),
@@ -45,6 +46,7 @@ require('tailwindcss-text-fill-stroke')({
 .text-fill-green { -webkit-text-fill-color: green; }
 .text-stroke-green { -webkit-text-stroke-color: green; }
 .text-stroke { -webkit-text-stroke-width: 1px; }
-.text-stroke-sm { -webkit-text-stroke-width: 4px; }
-.text-stroke-md { -webkit-text-stroke-width: 8px; }
+.text-stroke-sm { -webkit-text-stroke-width: 2px; }
+.text-stroke-md { -webkit-text-stroke-width: 4px; }
+.text-stroke-lg { -webkit-text-stroke-width: 8px; }
 ```
