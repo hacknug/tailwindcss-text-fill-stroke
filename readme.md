@@ -1,6 +1,6 @@
 # Tailwind CSS Text Indent Plugin
 
-This plugin adds utilities to use `text-fill` and `text-stroke` with Tailwind CSS.
+This plugin adds utilities to use `text-fill`, `text-stroke` and `paint-order` with Tailwind CSS.
 
 ## Installation
 

@@ -77,6 +77,13 @@ test('generates default utilities and responsive variants', () => {
     .text-stroke-8 { text-stroke-width: 8px }
     .text-stroke { text-stroke-width: 1px }
 
+    .paint-fsm { paint-order: fill, stroke, markers }
+    .paint-fms { paint-order: fill, markers, stroke }
+    .paint-sfm { paint-order: stroke, fill, markers }
+    .paint-smf { paint-order: stroke, markers, fill }
+    .paint-mfs { paint-order: markers, fill, stroke }
+    .paint-msf { paint-order: markers, stroke, fill }
+
     @media (min-width: 640px) {
       .sm\\:text-fill-transparent { text-fill-color: transparent }
       .sm\\:text-fill-black { text-fill-color: #000 }
@@ -111,6 +118,13 @@ test('generates default utilities and responsive variants', () => {
       .sm\\:text-stroke-4 { text-stroke-width: 4px }
       .sm\\:text-stroke-8 { text-stroke-width: 8px }
       .sm\\:text-stroke { text-stroke-width: 1px }
+
+      .sm\\:paint-fsm { paint-order: fill, stroke, markers }
+      .sm\\:paint-fms { paint-order: fill, markers, stroke }
+      .sm\\:paint-sfm { paint-order: stroke, fill, markers }
+      .sm\\:paint-smf { paint-order: stroke, markers, fill }
+      .sm\\:paint-mfs { paint-order: markers, fill, stroke }
+      .sm\\:paint-msf { paint-order: markers, stroke, fill }
     }
   `
 
@@ -123,6 +137,7 @@ test('variants can be customized', () => {
       textFillColor: ['hover'],
       textStrokeColor: ['focus'],
       textStrokeWidth: ['active'],
+      paintOrder: ['responsive'],
     },
   }
   const expectedCss = `
@@ -193,6 +208,22 @@ test('variants can be customized', () => {
     .active\\:text-stroke-4:active { text-stroke-width: 4px }
     .active\\:text-stroke-8:active { text-stroke-width: 8px }
     .active\\:text-stroke:active { text-stroke-width: 1px }
+
+    .paint-fsm { paint-order: fill, stroke, markers }
+    .paint-fms { paint-order: fill, markers, stroke }
+    .paint-sfm { paint-order: stroke, fill, markers }
+    .paint-smf { paint-order: stroke, markers, fill }
+    .paint-mfs { paint-order: markers, fill, stroke }
+    .paint-msf { paint-order: markers, stroke, fill }
+
+    @media (min-width: 640px) {
+      .sm\\:paint-fsm { paint-order: fill, stroke, markers }
+      .sm\\:paint-fms { paint-order: fill, markers, stroke }
+      .sm\\:paint-sfm { paint-order: stroke, fill, markers }
+      .sm\\:paint-smf { paint-order: stroke, markers, fill }
+      .sm\\:paint-mfs { paint-order: markers, fill, stroke }
+      .sm\\:paint-msf { paint-order: markers, stroke, fill }
+    }
   `
 
   return generatePluginCss(testConfig).then(css => expect(css).toMatchCss(expectedCss))
@@ -204,6 +235,7 @@ test('utilities can be customized', () => {
       textFillColor: theme => ({ ...theme('colors'), gray: theme('colors.gray.500'), default: '#38b2ac' }),
       textStrokeColor: theme => ({ transparent: theme('colors.transparent'), default: '#38b2ac' }),
       textStrokeWidth: { default: '1px', sm: '2px', md: '4px', lg: '8px' },
+      paintOrder: { stroke: 'stroke' }
     },
   }
   const expectedCss = `
@@ -221,6 +253,8 @@ test('utilities can be customized', () => {
     .text-stroke-md { text-stroke-width: 4px }
     .text-stroke-lg { text-stroke-width: 8px }
 
+    .paint-stroke { paint-order: stroke }
+
     @media (min-width: 640px) {
       .sm\\:text-fill-transparent { text-fill-color: transparent }
       .sm\\:text-fill-black { text-fill-color: #000 }
@@ -235,6 +269,8 @@ test('utilities can be customized', () => {
       .sm\\:text-stroke-sm { text-stroke-width: 2px }
       .sm\\:text-stroke-md { text-stroke-width: 4px }
       .sm\\:text-stroke-lg { text-stroke-width: 8px }
+
+      .sm\\:paint-stroke { paint-order: stroke }
     }
   `
 
