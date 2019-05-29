@@ -46,7 +46,7 @@ By default the plugin uses the `borderColor` and `borderWidth` properties from y
   },
 
   plugins: [
-    require('tailwindcss-blend-mode'), // no options to configure
+    require('tailwindcss-text-fill-stroke'), // no options to configure
   ],
 }
 ```
