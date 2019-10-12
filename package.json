@@ -30,12 +30,13 @@
   },
   "dependencies": {
     "flat": "^4.1.0",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
-    "jest": "^24.8.0",
-    "jest-matcher-css": "^1.0.3",
-    "postcss": "^7.0.16",
-    "tailwindcss": "^1.0.1"
+    "@hacknug/tailwindcss-plugin-utils": "^0.8.0",
+    "jest": "^24.9.0",
+    "jest-matcher-css": "^1.1.0",
+    "postcss": "^7.0.18",
+    "tailwindcss": "^1.1.2"
   }
 }

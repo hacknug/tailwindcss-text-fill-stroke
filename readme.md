@@ -29,12 +29,12 @@ By default the plugin uses the `borderColor` and `borderWidth` properties from y
     textStrokeColor: theme => theme('borderColor'),
     textStrokeWidth: theme => theme('borderWidth'),
     paintOrder: {
-      'fsm': { paintOrder: 'fill, stroke, markers' },
-      'fms': { paintOrder: 'fill, markers, stroke' },
-      'sfm': { paintOrder: 'stroke, fill, markers' },
-      'smf': { paintOrder: 'stroke, markers, fill' },
-      'mfs': { paintOrder: 'markers, fill, stroke' },
-      'msf': { paintOrder: 'markers, stroke, fill' },
+      'fsm': { paintOrder: 'fill stroke markers' },
+      'fms': { paintOrder: 'fill markers stroke' },
+      'sfm': { paintOrder: 'stroke fill markers' },
+      'smf': { paintOrder: 'stroke markers fill' },
+      'mfs': { paintOrder: 'markers fill stroke' },
+      'msf': { paintOrder: 'markers stroke fill' },
     },
   },
 
@@ -68,12 +68,12 @@ By default the plugin uses the `borderColor` and `borderWidth` properties from y
 .text-stroke-8 { text-stroke-width: 8px }
 .text-stroke { text-stroke-width: 1px }
 
-.paint-fsm { paint-order: fill, stroke, markers }
-.paint-fms { paint-order: fill, markers, stroke }
-.paint-sfm { paint-order: stroke, fill, markers }
-.paint-smf { paint-order: stroke, markers, fill }
-.paint-mfs { paint-order: markers, fill, stroke }
-.paint-msf { paint-order: markers, stroke, fill }
+.paint-fsm { paint-order: fill stroke markers }
+.paint-fms { paint-order: fill markers stroke }
+.paint-sfm { paint-order: stroke fill markers }
+.paint-smf { paint-order: stroke markers fill }
+.paint-mfs { paint-order: markers fill stroke }
+.paint-msf { paint-order: markers stroke fill }
 
 @media (min-width: 640px) {
   .sm\:text-fill-transparent { text-fill-color: transparent }
@@ -92,11 +92,11 @@ By default the plugin uses the `borderColor` and `borderWidth` properties from y
   .sm\:text-stroke-8 { text-stroke-width: 8px }
   .sm\:text-stroke { text-stroke-width: 1px }
 
-  .sm\:paint-fsm { paint-order: fill, stroke, markers }
-  .sm\:paint-fms { paint-order: fill, markers, stroke }
-  .sm\:paint-sfm { paint-order: stroke, fill, markers }
-  .sm\:paint-smf { paint-order: stroke, markers, fill }
-  .sm\:paint-mfs { paint-order: markers, fill, stroke }
-  .sm\:paint-msf { paint-order: markers, stroke, fill }
+  .sm\:paint-fsm { paint-order: fill stroke markers }
+  .sm\:paint-fms { paint-order: fill markers stroke }
+  .sm\:paint-sfm { paint-order: stroke fill markers }
+  .sm\:paint-smf { paint-order: stroke markers fill }
+  .sm\:paint-mfs { paint-order: markers fill stroke }
+  .sm\:paint-msf { paint-order: markers stroke fill }
 }
 ```
