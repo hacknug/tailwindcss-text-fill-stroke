@@ -28,15 +28,9 @@
     "dev": "jest --watchAll",
     "test": "jest"
   },
-  "dependencies": {
-    "flat": "^4.1.0",
-    "lodash": "^4.17.15"
-  },
   "devDependencies": {
     "@hacknug/tailwindcss-plugin-utils": "^0.8.0",
     "jest": "^24.9.0",
-    "jest-matcher-css": "^1.1.0",
-    "postcss": "^7.0.18",
-    "tailwindcss": "^1.1.2"
+    "jest-matcher-css": "^1.1.0"
   }
 }
