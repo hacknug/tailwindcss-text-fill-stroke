@@ -11,6 +11,6 @@ cache:
 before_install:
   - npm install -g pnpm
 install:
-  - pnpm install
+  - pnpm install --force
 script:
   - pnpm run test
