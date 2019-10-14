@@ -1,6 +1,3 @@
-const plugin = require('./index.js')
-const pluginOptions = {}
-
 module.exports = {
   theme: {
     paintOrder: {
@@ -12,6 +9,4 @@ module.exports = {
       'msf': 'markers stroke fill',
     },
   },
-
-  plugins: [plugin(pluginOptions)],
 }

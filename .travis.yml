@@ -9,8 +9,8 @@ cache:
     - node_modules
 
 before_install:
-  - curl -L https://unpkg.com/@pnpm/self-installer | node
-
+  - npm install -g pnpm
+install:
+  - pnpm install --force
 script:
-  - pnpm install
   - pnpm run test

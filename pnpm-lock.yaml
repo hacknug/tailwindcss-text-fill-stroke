@@ -1,5 +1,5 @@
 devDependencies:
-  '@hacknug/tailwindcss-plugin-utils': 0.8.0
+  '@hacknug/tailwindcss-plugin-utils': 0.9.0-beta.0
   jest: 24.9.0
   jest-matcher-css: 1.1.0
 lockfileVersion: 5.1
@@ -136,17 +136,40 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-r5160ogAvGyHsal38Kux7YYtodEKOj89RGb28ht1jh3SJb08VwRwAKKJL0bGb04Zd/3r9FL3BFIc3bBidYffCA==
-  /@hacknug/tailwindcss-plugin-utils/0.8.0:
+  /@hacknug/tailwindcss-plugin-utils/0.9.0-beta.0:
     dependencies:
       flat: 4.1.0
       lodash: 4.17.15
       postcss: 7.0.18
-      tailwindcss: 1.1.2
+      tailwindcss: /@hacknug/tailwindcss/1.1.2
     dev: true
     engines:
       node: '>=8.9.0'
     resolution:
-      integrity: sha512-g7DTjLhZe/oWGtlo1w4LzsElJJp+Q3VenFmDJrx91exyBOgdF74WmMNzhiEvG+qckyriy0jy/kIDj8jlN9pxVg==
+      integrity: sha512-945A/kK9EsGyF4AgCjRUgNgptzcAxnIGZgwSx3r8GBiJpqvPJowazRCQUTMG2gGPk5W20hSff1qodeLkxIvUAg==
+  /@hacknug/tailwindcss/1.1.2:
+    dependencies:
+      autoprefixer: 9.6.5
+      bytes: 3.1.0
+      chalk: 2.4.2
+      detective: 5.2.0
+      fs-extra: 8.1.0
+      lodash: 4.17.15
+      node-emoji: 1.10.0
+      normalize.css: 8.0.1
+      postcss: 7.0.18
+      postcss-functions: 3.0.0
+      postcss-js: 2.0.3
+      postcss-nested: 4.1.2
+      postcss-selector-parser: 6.0.2
+      pretty-hrtime: 1.0.3
+      reduce-css-calc: 2.1.6
+    dev: true
+    engines:
+      node: '>=8.9.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-Uss1z8xgwlNXfkJJGNneWu3k3fvQfvH2AeuFFIUR+LlPA4+fpWpXFpIQ50jwF/Q/aMxZHA/bMcSYJ2DzSd21iA==
   /@jest/console/24.9.0:
     dependencies:
       '@jest/source-map': 24.9.0
@@ -376,12 +399,26 @@ packages:
     dev: true
     resolution:
       integrity: sha512-clfQEh21R+D0leSbUdWf3OcfqyaCSAQ8Ryq00bofSekfr9W8u1jyYZo6ir0xu9Gtcf7BjcHJpnbZH7JOCpP60A==
+  /acorn-node/1.8.2:
+    dependencies:
+      acorn: 7.1.0
+      acorn-walk: 7.0.0
+      xtend: 4.0.2
+    dev: true
+    resolution:
+      integrity: sha512-8mt+fslDufLYntIoPAaIMUe/lrbrehIiwmR3t2k9LljIzoigEPF27eLk2hy8zSGzmR/ogr7zbRKINMo1u0yh5A==
   /acorn-walk/6.2.0:
     dev: true
     engines:
       node: '>=0.4.0'
     resolution:
       integrity: sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==
+  /acorn-walk/7.0.0:
+    dev: true
+    engines:
+      node: '>=0.4.0'
+    resolution:
+      integrity: sha512-7Bv1We7ZGuU79zZbb6rRqcpxo3OY+zrdtloZWoyD8fmGX+FeXRjE+iuGkZjSXLVovLzrsvMGMy0EkwA0E0umxg==
   /acorn/5.7.3:
     dev: true
     engines:
@@ -396,6 +433,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-/czfa8BwS88b9gWQVhc8eknunSA2DoJpJyTQkhheIf5E48u1N0R4q/YxxsAeqRrmK9TQ/uYfgLDfZo91UlANIA==
+  /acorn/7.1.0:
+    dev: true
+    engines:
+      node: '>=0.4.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-kL5CuoXA/dgxlBbVrflsflzQ3PAas7RYZB52NOm/6839iVYJgKMJ3cQJD+t2i5+qFa8h3MDpEOJiS64E8JLnSQ==
   /ajv/6.10.2:
     dependencies:
       fast-deep-equal: 2.0.1
@@ -505,7 +549,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
-  /autoprefixer/9.6.4:
+  /autoprefixer/9.6.5:
     dependencies:
       browserslist: 4.7.0
       caniuse-lite: 1.0.30000999
@@ -519,7 +563,7 @@ packages:
       node: '>=6.0.0'
     hasBin: true
     resolution:
-      integrity: sha512-Koz2cJU9dKOxG8P1f8uVaBntOv9lP4yz9ffWvWaicv9gHBPhpQB22nGijwd8gqW9CNT+UdkbQOQNLVI8jN1ZfQ==
+      integrity: sha512-rGd50YV8LgwFQ2WQp4XzOTG69u1qQsXn0amww7tjqV5jJuNazgFKYEVItEBngyyvVITKOg20zr2V+9VsrXJQ2g==
   /aws-sign2/0.7.0:
     dev: true
     resolution:
@@ -922,6 +966,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-jwK2UV4cnPpbcG7+VRARKTZPUWowwXA8bzH5NP6ud0oeAxyYPuGZUAC7hMugpCdz4BeSZl2Dl9k66CHJ/46ZYQ==
+  /defined/1.0.0:
+    dev: true
+    resolution:
+      integrity: sha1-yY2bzvdWdBiOEQlpFRGZ45sfppM=
   /delayed-stream/1.0.0:
     dev: true
     engines:
@@ -934,6 +982,17 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-9B8cEL5LAOh7XxPaaAdZ8sW/0+I=
+  /detective/5.2.0:
+    dependencies:
+      acorn-node: 1.8.2
+      defined: 1.0.0
+      minimist: 1.2.0
+    dev: true
+    engines:
+      node: '>=0.8.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-6SsIx+nUUbuK0EthKjv0zrdnajCCXVYGmbYYiYjFVpzcjwEs/JMDZ8tPRG29J/HhN56t3GJp2cGSWDRjjot8Pg==
   /diff-sequences/24.9.0:
     dev: true
     engines:
@@ -3300,28 +3359,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
-  /tailwindcss/1.1.2:
-    dependencies:
-      autoprefixer: 9.6.4
-      bytes: 3.1.0
-      chalk: 2.4.2
-      fs-extra: 8.1.0
-      lodash: 4.17.15
-      node-emoji: 1.10.0
-      normalize.css: 8.0.1
-      postcss: 7.0.18
-      postcss-functions: 3.0.0
-      postcss-js: 2.0.3
-      postcss-nested: 4.1.2
-      postcss-selector-parser: 6.0.2
-      pretty-hrtime: 1.0.3
-      reduce-css-calc: 2.1.6
-    dev: true
-    engines:
-      node: '>=8.9.0'
-    hasBin: true
-    resolution:
-      integrity: sha512-mcTzZHXMipnQY9haB17baNJmBTkYYcC8ljfMdB9/97FfhKJIzlglJcyGythuQTOu7r/QIbLfZYYWZhAvaGj95A==
   /test-exclude/5.2.3:
     dependencies:
       glob: 7.1.4
@@ -3598,6 +3635,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-A5CUptxDsvxKJEU3yO6DuWBSJz/qizqzJKOMIfUJHETbBw/sFaDxgd6fxm1ewUaM0jZ444Fc5vC5ROYurg/4Pw==
+  /xtend/4.0.2:
+    dev: true
+    engines:
+      node: '>=0.4'
+    resolution:
+      integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
   /y18n/4.0.0:
     dev: true
     resolution:
@@ -3625,6 +3668,6 @@ packages:
     resolution:
       integrity: sha512-2eehun/8ALW8TLoIl7MVaRUrg+yCnenu8B4kBlRxj3GJGDKU1Og7sMXPNm1BYyM1DOJmTZ4YeN/Nwxv+8XJsUA==
 specifiers:
-  '@hacknug/tailwindcss-plugin-utils': ^0.8.0
+  '@hacknug/tailwindcss-plugin-utils': ^0.9.0-beta.0
   jest: ^24.9.0
   jest-matcher-css: ^1.1.0
