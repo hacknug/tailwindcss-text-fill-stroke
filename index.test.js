@@ -1,5 +1,5 @@
-const tailwindConfig = require('./tailwind.config.js')
 const { generatePluginCss } = require('@hacknug/tailwindcss-plugin-utils')
+const plugin = require('./index.js')
 
 expect.extend({ toMatchCss: require('jest-matcher-css') })
 
@@ -24,6 +24,7 @@ const commonConfig = {
     },
   },
   corePlugins: false,
+  plugins: [plugin({ options: true })],
 }
 
 test('generates default utilities', () => {
@@ -71,7 +72,7 @@ test('generates default utilities', () => {
     .paint-msf { paint-order: markers stroke fill }
   `
 
-  return generatePluginCss(tailwindConfig, testConfig).then(css => expect(css).toMatchCss(expectedCss))
+  return generatePluginCss(testConfig).then(css => expect(css).toMatchCss(expectedCss))
 })
 
 test('variants can be customized', () => {
@@ -184,12 +185,12 @@ test('variants can be customized', () => {
     }
   `
 
-  return generatePluginCss(tailwindConfig, testConfig).then(css => expect(css).toMatchCss(expectedCss))
+  return generatePluginCss(testConfig).then(css => expect(css).toMatchCss(expectedCss))
 })
-
 
 test('utilities can be customized', () => {
   const testConfig = {
+    ...commonConfig,
     theme: {
       textFillColor: theme => ({
         transparent: 'transparent',
@@ -221,16 +222,8 @@ test('utilities can be customized', () => {
     .text-stroke-md { -webkit-text-stroke-width: 4px }
     .text-stroke-lg { -webkit-text-stroke-width: 8px }
 
-    ${ /* FIXME: Merging of configs not working */'' }
-    .paint-fsm { paint-order: fill stroke markers }
-    .paint-fms { paint-order: fill markers stroke }
-    .paint-sfm { paint-order: stroke fill markers }
-    .paint-smf { paint-order: stroke markers fill }
-    .paint-mfs { paint-order: markers fill stroke }
-    .paint-msf { paint-order: markers stroke fill }
-
     .paint-stroke { paint-order: stroke }
   `
 
-  return generatePluginCss(tailwindConfig, testConfig).then(css => expect(css).toMatchCss(expectedCss))
+  return generatePluginCss(testConfig).then(css => expect(css).toMatchCss(expectedCss))
 })
