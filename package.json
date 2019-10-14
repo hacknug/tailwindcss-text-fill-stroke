@@ -28,8 +28,10 @@
     "dev": "jest --watchAll",
     "test": "jest"
   },
+  "dependencies": {
+    "@hacknug/tailwindcss-plugin-utils": "^0.8.0"
+  },
   "devDependencies": {
-    "@hacknug/tailwindcss-plugin-utils": "^0.8.0",
     "jest": "^24.9.0",
     "jest-matcher-css": "^1.1.0"
   }
