@@ -3,6 +3,9 @@ const { generatePluginCss } = require('@hacknug/tailwindcss-plugin-utils')
 
 expect.extend({ toMatchCss: require('jest-matcher-css') })
 
+const plugin = require('./index.js')
+const pluginOptions = {}
+
 const commonConfig = {
   theme: {
     screens: { 'sm': '640px' },
@@ -24,6 +27,7 @@ const commonConfig = {
     },
   },
   corePlugins: false,
+  plugins: [plugin(pluginOptions)],
 }
 
 test('generates default utilities', () => {
@@ -187,9 +191,9 @@ test('variants can be customized', () => {
   return generatePluginCss(tailwindConfig, testConfig).then(css => expect(css).toMatchCss(expectedCss))
 })
 
-
 test('utilities can be customized', () => {
   const testConfig = {
+    ...commonConfig,
     theme: {
       textFillColor: theme => ({
         transparent: 'transparent',
