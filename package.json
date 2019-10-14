@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-text-fill-stroke",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Text-fill and text-stroke utilities for Tailwind CSS.",
   "keywords": [
     "plugin",
