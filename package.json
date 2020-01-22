@@ -32,7 +32,7 @@
     "@hacknug/tailwindcss-plugin-utils": "^0.8.0"
   },
   "devDependencies": {
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "jest-matcher-css": "^1.1.0"
   }
 }
