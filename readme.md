@@ -2,6 +2,9 @@
 
 This plugin adds utilities to use `text-fill`, `text-stroke` and `paint-order` with Tailwind CSS.
 
+> **Note**  
+> Now with support for TailwindCSS v3 and arbitrary values and variants :sparkles:
+
 ## Installation
 
 Add this plugin to your project:
@@ -38,35 +41,28 @@ By default the plugin uses the `borderColor` and `borderWidth` properties from y
     },
   },
 
-  variants: { // all the following default to ['responsive']
-    textFillColor: ['responsive'],
-    textStrokeColor: ['responsive'],
-    textStrokeWidth: ['responsive'],
-    paintOrder: ['responsive'],
-  },
-
   plugins: [
-    require('tailwindcss-text-fill-stroke')(), // no options to configure
+    require('tailwindcss-text-fill-stroke'), // no options to configure
   ],
 }
 ```
 
 ```css
+.text-fill { -webkit-text-fill-color: #e0e0e0 }
 .text-fill-transparent { -webkit-text-fill-color: transparent }
 .text-fill-black { -webkit-text-fill-color: #000 }
 .text-fill-white { -webkit-text-fill-color: #fff }
-.text-fill { -webkit-text-fill-color: #e0e0e0 }
 
+.text-stroke { -webkit-text-stroke-color: #e0e0e0 }
 .text-stroke-transparent { -webkit-text-stroke-color: transparent }
 .text-stroke-black { -webkit-text-stroke-color: #000 }
 .text-stroke-white { -webkit-text-stroke-color: #fff }
-.text-stroke { -webkit-text-stroke-color: #e0e0e0 }
 
+.text-stroke { -webkit-text-stroke-width: 1px }
 .text-stroke-0 { -webkit-text-stroke-width: 0 }
 .text-stroke-2 { -webkit-text-stroke-width: 2px }
 .text-stroke-4 { -webkit-text-stroke-width: 4px }
 .text-stroke-8 { -webkit-text-stroke-width: 8px }
-.text-stroke { -webkit-text-stroke-width: 1px }
 
 .paint-fsm { paint-order: fill stroke markers }
 .paint-fms { paint-order: fill markers stroke }
@@ -76,21 +72,21 @@ By default the plugin uses the `borderColor` and `borderWidth` properties from y
 .paint-msf { paint-order: markers stroke fill }
 
 @media (min-width: 640px) {
+  .sm\:text-fill { -webkit-text-fill-color: #e0e0e0 }
   .sm\:text-fill-transparent { -webkit-text-fill-color: transparent }
   .sm\:text-fill-black { -webkit-text-fill-color: #000 }
   .sm\:text-fill-white { -webkit-text-fill-color: #fff }
-  .sm\:text-fill { -webkit-text-fill-color: #e0e0e0 }
 
+  .sm\:text-stroke { -webkit-text-stroke-color: #e0e0e0 }
   .sm\:text-stroke-transparent { -webkit-text-stroke-color: transparent }
   .sm\:text-stroke-black { -webkit-text-stroke-color: #000 }
   .sm\:text-stroke-white { -webkit-text-stroke-color: #fff }
-  .sm\:text-stroke { -webkit-text-stroke-color: #e0e0e0 }
 
+  .sm\:text-stroke { -webkit-text-stroke-width: 1px }
   .sm\:text-stroke-0 { -webkit-text-stroke-width: 0 }
   .sm\:text-stroke-2 { -webkit-text-stroke-width: 2px }
   .sm\:text-stroke-4 { -webkit-text-stroke-width: 4px }
   .sm\:text-stroke-8 { -webkit-text-stroke-width: 8px }
-  .sm\:text-stroke { -webkit-text-stroke-width: 1px }
 
   .sm\:paint-fsm { paint-order: fill stroke markers }
   .sm\:paint-fms { paint-order: fill markers stroke }
