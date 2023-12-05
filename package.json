@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "flat": "5.0.2",
-    "tailwindcss": "3.1.8"
+    "tailwindcss": "3.3.6"
   },
   "devDependencies": {
     "jest": "29.7.0",
