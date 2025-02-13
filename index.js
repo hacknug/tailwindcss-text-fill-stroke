@@ -1,8 +1,8 @@
-const flat = require('flat')
-const plugin = require('tailwindcss/plugin')
+import { flatten } from 'flat'
+import plugin from 'tailwindcss/plugin'
 
 const normalizeValues = (config) => Object.fromEntries(
-  Object.entries(flat(config, { delimiter: '-', maxDepth: 2 })).sort(([a], [b]) => a === 'DEFAULT' ? -1 : 1)
+  Object.entries(flatten(config, { delimiter: '-', maxDepth: 2 })).sort(([a], [b]) => a === 'DEFAULT' ? -1 : 1)
 )
 
 module.exports = plugin(({ matchUtilities, theme }) => {
