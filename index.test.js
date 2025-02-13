@@ -9,6 +9,7 @@ const pluginOptions = {}
 const commonConfig = {
   theme: {
     screens: { sm: '640px' },
+    opacity: {},
     colors: {
       // inherit: 'inherit',
       // current: 'currentColor',
@@ -102,6 +103,13 @@ test('utilities can be customized', () => {
       textStrokeWidth: { DEFAULT: '1px', sm: '2px', md: '4px', lg: '8px' },
       paintOrder: { stroke: 'stroke' }
     },
+    safelist: [],
+    content: [
+      { raw: String.raw`<div class="text-fill text-fill-transparent text-fill-black text-fill-white text-fill-gray"></div>` },
+      { raw: String.raw`<div class="text-stroke text-stroke-transparent"></div>` },
+      { raw: String.raw`<div class="text-stroke text-stroke-sm text-stroke-md text-stroke-lg"></div>` },
+      { raw: String.raw`<div class="paint-stroke"></div>` },
+    ],
   }
   const expectedCss = `
     .text-fill { -webkit-text-fill-color: #38b2ac }
