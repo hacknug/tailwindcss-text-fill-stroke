@@ -159,6 +159,44 @@ test('variants can be customized', () => {
     .then((result) => expect(result.css).toMatchCss(expectedCss))
 })
 
+test('utilities can use decimal values', () => {
+  const testConfig = {
+    ...commonConfig,
+    theme: {
+      textStrokeWidth: { '0.5': '0.5px' },
+    },
+    safelist: [],
+    content: [
+      { raw: String.raw`<div class="text-stroke-0.5"></div>` },
+    ],
+  }
+  const expectedCss = `
+    .text-stroke-0\\.5 { -webkit-text-stroke-width: 0.5px }
+  `
+
+  return postcss(tailwind(testConfig)).process('@tailwind utilities;', { from: undefined })
+    .then((result) => expect(result.css).toMatchCss(expectedCss))
+})
+
+test('utilities can use negative values', () => {
+  const testConfig = {
+    ...commonConfig,
+    theme: {
+      textStrokeWidth: { '-4': '-4px' },
+    },
+    safelist: [],
+    content: [
+      { raw: String.raw`<div class="-text-stroke-4"></div>` },
+    ],
+  }
+  const expectedCss = `
+    .-text-stroke-4 { -webkit-text-stroke-width: -4px }
+  `
+
+  return postcss(tailwind(testConfig)).process('@tailwind utilities;', { from: undefined })
+    .then((result) => expect(result.css).toMatchCss(expectedCss))
+})
+
 test('utilities accept arbitrary values', () => {
   const testConfig = {
     ...commonConfig,
