@@ -5,7 +5,7 @@ const normalizeValues = (config) => Object.fromEntries(
   Object.entries(flatten(config, { delimiter: '-', maxDepth: 2 })).sort(([a], [b]) => a === 'DEFAULT' ? -1 : 1)
 )
 
-module.exports = plugin(({ matchUtilities, theme }) => {
+export default plugin(({ matchUtilities, theme }) => {
   matchUtilities(
     { 'text-fill': (value) => ({ '-webkit-text-fill-color': value }) },
     { values: normalizeValues(theme('textFillColor', theme('borderColor'))), type: ['color'] },
