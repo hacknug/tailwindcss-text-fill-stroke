@@ -2,7 +2,7 @@
 
 This plugin adds utilities to use `text-fill`, `text-stroke` and `paint-order` with Tailwind CSS.
 
-> **Note**  
+> [!NOTE] 
 > Now with support for TailwindCSS v3 and arbitrary values and variants :sparkles:
 
 ## Installation
