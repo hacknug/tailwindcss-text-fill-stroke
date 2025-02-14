@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "flat": "^6.0.1",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.0.6"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "3.0.5",
