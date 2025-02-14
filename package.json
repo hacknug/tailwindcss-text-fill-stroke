@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-text-fill-stroke",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "description": "This plugin adds utilities to use text-fill, text-stroke and paint-order with Tailwind CSS.",
   "keywords": [
     "plugin",
